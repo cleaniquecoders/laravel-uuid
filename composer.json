@@ -1,7 +1,7 @@
 {
-    "name": "cleanique-coders/laravel-uuid",
-    "description": "Built with Laravel Standalone Package Creator",
-    "keywords": ["package", "laravel"],
+    "name": "cleaniquecoders/laravel-uuid",
+    "description": "Use UUID for your Laravel application.",
+    "keywords": ["package", "laravel", "uuid"],
     "license": "MIT",
     "authors": [
         {
@@ -24,8 +24,9 @@
     },
     "require": {
         "php": ">=7.3",
-        "illuminate/support": "^5.5|^5.6|^5.7|^5.8|^6.0|^7.0",
-        "illuminate/auth": "^5.5|^5.6|^5.7|^5.8|^6.0|^7.0"
+        "doctrine/dbal": "^2.10",
+        "illuminate/auth": "^5.5|^5.6|^5.7|^5.8|^6.0|^7.0",
+        "illuminate/support": "^5.5|^5.6|^5.7|^5.8|^6.0|^7.0"
     },
     "require-dev": {
         "orchestra/testbench": "3.5.*|3.6.*|3.7.*|3.8.*|4.*|5.*"
