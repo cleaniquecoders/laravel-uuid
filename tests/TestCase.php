@@ -17,6 +17,7 @@ class TestCase extends \Orchestra\Testbench\TestCase
     {
         return [
             \CleaniqueCoders\LaravelUuid\LaravelUuidServiceProvider::class,
+            \CleaniqueCoders\LaravelUuid\Tests\Stubs\Providers\UnitTestServiceProvider::class,
         ];
     }
 }
