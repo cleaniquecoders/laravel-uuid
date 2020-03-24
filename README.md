@@ -1,31 +1,61 @@
 
-[![Build Status](https://travis-ci.org/cleanique-coders/laravel-uuid.svg?branch=master)](https://travis-ci.org/cleanique-coders/laravel-uuid) [![Latest Stable Version](https://poser.pugx.org/cleanique-coders/laravel-uuid/v/stable)](https://packagist.org/packages/cleanique-coders/laravel-uuid) [![Total Downloads](https://poser.pugx.org/cleanique-coders/laravel-uuid/downloads)](https://packagist.org/packages/cleanique-coders/laravel-uuid) [![License](https://poser.pugx.org/cleanique-coders/laravel-uuid/license)](https://packagist.org/packages/cleanique-coders/laravel-uuid)
+[![Build Status](https://travis-ci.org/cleaniquecoders/laravel-uuid.svg?branch=master)](https://travis-ci.org/cleaniquecoders/laravel-uuid) [![Latest Stable Version](https://poser.pugx.org/cleaniquecoders/laravel-uuid/v/stable)](https://packagist.org/packages/cleaniquecoders/laravel-uuid) [![Total Downloads](https://poser.pugx.org/cleaniquecoders/laravel-uuid/downloads)](https://packagist.org/packages/cleaniquecoders/laravel-uuid) [![License](https://poser.pugx.org/cleaniquecoders/laravel-uuid/license)](https://packagist.org/packages/cleaniquecoders/laravel-uuid)
 
-## About Your Package
+## Laravel Uuid
 
-Tell people about your package
+This package allows you to use UUID as primary key.
 
 ## Installation
 
-1. In order to install `cleanique-coders/laravel-uuid` in your Laravel project, just run the *composer require* command from your terminal:
+1. In order to install `cleaniquecoders/laravel-uuid` in your Laravel project, just run the *composer require* command from your terminal:
 
 ```
-$ composer require cleanique-coders/laravel-uuid
-```
-
-2. Then in your `config/app.php` add the following to the providers array:
-
-```php
-CleaniqueCoders\LaravelUuid\LaravelUuidServiceProvider::class,
-```
-
-3. In the same `config/app.php` add the following to the aliases array:
-
-```php
-'LaravelUuid' => CleaniqueCoders\LaravelUuid\LaravelUuidFacade::class,
+$ composer require cleaniquecoders/laravel-uuid
 ```
 
 ## Usage
+
+First, you need to define in your migration the uuid field you want to use:
+
+```php 
+$table->uuid('uuid')->default('-');
+```
+
+Configure your model to include `\CleaniqueCoders\LaravelUuid\Traits
+HasUuid` trait and implement `\CleaniqueCoders\LaravelUuid\Contracts\HasUuid` contract.
+
+```php 
+use Illuminate\Database\Eloquent\Model;
+use CleaniqueCoders\LaravelUuid\Contracts\HasUuid as HasUuidContract;
+use CleaniqueCoders\LaravelUuid\Traits\HasUuid;
+
+class User extends Model implements HasUuidContract
+{
+    use HasUuid;
+}
+```
+
+By using the trait, you are able to use `uuid($uuid)` scope. Additional setup, you may want to define `protected $uuid_column = 'user_uuid'` if you have different UUID column name.
+
+```php 
+$user = User::uuid($uuid)->first();
+```
+
+Next, you can use `\CleaniqueCoders\LaravelUuid\Observers\UuidObserver` to automatically set the `uuid` value for you before save into database. You need to register in the `App\Providers\AppServiceProvider` in `boot` method:
+
+```php 
+use CleaniqueCoders\LaravelUuid\Observers\UuidObserver;
+use App\User;
+...
+public function boot()
+{
+    User::observe(UuidObserver::class);
+}
+```
+
+Alternatively, you can utilise the [Laravel Observer](https://github.com/cleaniquecoders/laravel-observers) package.
+
+
 
 ## Test
 
@@ -37,7 +67,7 @@ $ vendor/bin/phpunit  --testdox --verbose
 
 ## Contributing
 
-Thank you for considering contributing to the `cleanique-coders/laravel-uuid`!
+Thank you for considering contributing to the `cleaniquecoders/laravel-uuid`!
 
 ### Bug Reports
 
@@ -49,7 +79,7 @@ Remember, bug reports are created in the hope that others with the same problem 
 
 ## Coding Style
 
-`cleanique-coders/laravel-uuid` follows the PSR-2 coding standard and the PSR-4 autoloading standard. 
+`cleaniquecoders/laravel-uuid` follows the PSR-2 coding standard and the PSR-4 autoloading standard. 
 
 You may use PHP CS Fixer in order to keep things standardised. PHP CS Fixer configuration can be found in `.php_cs`.
 
