@@ -7,7 +7,7 @@ This package allows you to use UUID as primary key.
 
 ## Installation
 
-1. In order to install `cleaniquecoders/laravel-uuid` in your Laravel project, just run the *composer require* command from your terminal:
+In order to install `cleaniquecoders/laravel-uuid` in your Laravel project, just run the *composer require* command from your terminal:
 
 ```
 $ composer require cleaniquecoders/laravel-uuid
