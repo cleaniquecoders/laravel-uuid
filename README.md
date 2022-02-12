@@ -1,5 +1,5 @@
 
-[![Build Status](https://travis-ci.org/cleaniquecoders/laravel-uuid.svg?branch=master)](https://travis-ci.org/cleaniquecoders/laravel-uuid) [![Latest Stable Version](https://poser.pugx.org/cleaniquecoders/laravel-uuid/v/stable)](https://packagist.org/packages/cleaniquecoders/laravel-uuid) [![Total Downloads](https://poser.pugx.org/cleaniquecoders/laravel-uuid/downloads)](https://packagist.org/packages/cleaniquecoders/laravel-uuid) [![License](https://poser.pugx.org/cleaniquecoders/laravel-uuid/license)](https://packagist.org/packages/cleaniquecoders/laravel-uuid)
+[![Latest Stable Version](https://poser.pugx.org/cleaniquecoders/laravel-uuid/v/stable)](https://packagist.org/packages/cleaniquecoders/laravel-uuid) [![Total Downloads](https://poser.pugx.org/cleaniquecoders/laravel-uuid/downloads)](https://packagist.org/packages/cleaniquecoders/laravel-uuid) [![License](https://poser.pugx.org/cleaniquecoders/laravel-uuid/license)](https://packagist.org/packages/cleaniquecoders/laravel-uuid)
 
 ## Laravel Uuid
 

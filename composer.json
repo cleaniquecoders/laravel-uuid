@@ -29,7 +29,9 @@
         "illuminate/support": "^9.0"
     },
     "require-dev": {
-        "orchestra/testbench": "7.*"
+        "orchestra/testbench": "7.*",
+        "pestphp/pest": "^1.21",
+        "phpstan/phpstan-phpunit": "^1.0"
     },
     "extra": {
         "laravel": {
