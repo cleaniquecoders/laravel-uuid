@@ -15,17 +15,17 @@ trait UserTrait
     {
         $now = \Carbon\Carbon::now();
         \DB::table('users')->insert([
-            'name'       => 'PHPUnit',
-            'email'      => 'hello@phpunit.com',
-            'password'   => \Hash::make('456'),
+            'name' => 'PHPUnit',
+            'email' => 'hello@phpunit.com',
+            'password' => \Hash::make('456'),
             'created_at' => $now,
             'updated_at' => $now,
         ]);
 
         \DB::table('users')->insert([
-            'name'       => 'PHPUnit',
-            'email'      => 'hi@phpunit.com',
-            'password'   => \Hash::make('456'),
+            'name' => 'PHPUnit',
+            'email' => 'hi@phpunit.com',
+            'password' => \Hash::make('456'),
             'created_at' => $now,
             'updated_at' => $now,
         ]);

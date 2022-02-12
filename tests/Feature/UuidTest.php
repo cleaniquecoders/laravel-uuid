@@ -27,8 +27,8 @@ class UuidTest extends TestCase
     public function is_an_instance_of_uuid_contract()
     {
         $user = User::create([
-            'name'     => 'Laravel Uuid',
-            'email'    => 'unittest@laravel.uuid',
+            'name' => 'Laravel Uuid',
+            'email' => 'unittest@laravel.uuid',
             'password' => 'password',
         ]);
         $this->assertTrue($user instanceof HasUuidContract);
@@ -38,10 +38,10 @@ class UuidTest extends TestCase
     public function has_valid_uuid_on_created_record()
     {
         $user = User::create([
-            'name'     => 'Laravel Uuid',
-            'email'    => 'unittest@laravel.uuid',
+            'name' => 'Laravel Uuid',
+            'email' => 'unittest@laravel.uuid',
             'password' => 'password',
-            'uuid'     => uuid(),
+            'uuid' => uuid(),
         ]);
         $this->assertTrue($user instanceof HasUuidContract);
         $this->assertTrue(validUuid($user->uuid));
@@ -51,8 +51,8 @@ class UuidTest extends TestCase
     public function has_valid_uuid_on_created_record_using_uuid_observer()
     {
         $user = User::create([
-            'name'     => 'Laravel Uuid',
-            'email'    => 'unittest@laravel.uuid',
+            'name' => 'Laravel Uuid',
+            'email' => 'unittest@laravel.uuid',
             'password' => 'password',
         ]);
         $this->assertTrue($user instanceof HasUuidContract);
