@@ -20,7 +20,7 @@ class UuidTest extends TestCase
 
         $this->loadLaravelMigrations();
 
-        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
     }
 
     /** @test */

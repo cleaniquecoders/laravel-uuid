@@ -20,8 +20,8 @@ if (! function_exists('validUuid')) {
     function validUuid(string $value): bool
     {
         return ! Validator::make([
-                'uuid' => $value,
-            ], [
+            'uuid' => $value,
+        ], [
             'uuid' => 'string|uuid',
         ])->fails();
     }
