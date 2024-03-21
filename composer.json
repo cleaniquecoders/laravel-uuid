@@ -1,60 +1,60 @@
 {
-  "name": "cleaniquecoders/laravel-uuid",
-  "description": "Use UUID for your Laravel application.",
-  "keywords": [
-    "package",
-    "laravel",
-    "uuid"
-  ],
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Nasrul Hazim",
-      "email": "nasrulhazim.m@gmail.com"
-    }
-  ],
-  "autoload": {
-    "psr-4": {
-      "CleaniqueCoders\\LaravelUuid\\": "src/"
-    },
-    "files": [
-      "src/Support/helpers.php"
-    ]
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "CleaniqueCoders\\LaravelUuid\\Tests\\": "tests/"
-    }
-  },
-  "require": {
-    "php": "^8.1 | ^8.2 | ^8.3",
-    "doctrine/dbal": "^3.6",
-    "illuminate/auth": "^9.0 | ^10.0 | ^11.0",
-    "illuminate/support": "^9.0 | ^10.0 | ^11.0"
-  },
-  "require-dev": {
-    "laravel/pint": "^1.6",
-    "orchestra/testbench": "7.*|8.*",
-    "pestphp/pest": "^2.0",
-    "phpstan/phpstan-phpunit": "^1.0"
-  },
-  "extra": {
-    "laravel": {
-      "providers": [
-        "CleaniqueCoders\\LaravelUuid\\LaravelUuidServiceProvider"
-      ]
-    }
-  },
-  "config": {
-    "sort-packages": true,
-    "allow-plugins": {
-      "pestphp/pest-plugin": true
-    }
-  },
-  "scripts": {
-    "test": "vendor/bin/pest",
-    "format": "vendor/bin/pint"
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true
+	"name": "cleaniquecoders/laravel-uuid",
+	"description": "Use UUID for your Laravel application.",
+	"keywords": [
+		"package",
+		"laravel",
+		"uuid"
+	],
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Nasrul Hazim",
+			"email": "nasrulhazim.m@gmail.com"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"CleaniqueCoders\\LaravelUuid\\": "src/"
+		},
+		"files": [
+			"src/Support/helpers.php"
+		]
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"CleaniqueCoders\\LaravelUuid\\Tests\\": "tests/"
+		}
+	},
+	"require": {
+		"php": "^8.1 | ^8.2 | ^8.3",
+		"doctrine/dbal": "^3.6",
+		"illuminate/auth": "^9.0 | ^10.0 | ^11.0",
+		"illuminate/support": "^9.0 | ^10.0 | ^11.0"
+	},
+	"require-dev": {
+		"laravel/pint": "^1.6",
+		"orchestra/testbench": "7.*|8.*",
+		"pestphp/pest": "^2.0",
+		"phpstan/phpstan-phpunit": "^1.0"
+	},
+	"extra": {
+		"laravel": {
+			"providers": [
+				"CleaniqueCoders\\LaravelUuid\\LaravelUuidServiceProvider"
+			]
+		}
+	},
+	"config": {
+		"sort-packages": true,
+		"allow-plugins": {
+			"pestphp/pest-plugin": true
+		}
+	},
+	"scripts": {
+		"test": "vendor/bin/pest",
+		"format": "vendor/bin/pint"
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true
 }
