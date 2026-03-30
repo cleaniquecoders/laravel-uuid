@@ -36,7 +36,7 @@
         "laravel/pint": "^1.6",
         "orchestra/testbench": "7.*|8.*|^11.0",
         "pestphp/pest": "^2.0||^4.0",
-        "phpstan/phpstan-phpunit": "^1.0"
+        "phpstan/phpstan-phpunit": "^1.0||^2.0"
     },
     "extra": {
         "laravel": {
